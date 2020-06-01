@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.3.4" orientation="orthogonal" renderorder="right-down" width="40" height="24" tilewidth="128" tileheight="128" infinite="0" backgroundcolor="#55ffff" nextlayerid="6" nextobjectid="1">
+ <tileset firstgid="1" source="my_tiles.tsx"/>
+ <layer id="4" name="Platform" width="40" height="24">
+  <data encoding="base64" compression="zlib">
+   eJztwzENAAAIA7Dh3zQaFg6eNmkCAAAAd1P8sBUEAAw=
+  </data>
+ </layer>
+ <layer id="5" name="Coins" width="40" height="24">
+  <data encoding="base64" compression="zlib">
+   eJztxbEJAAAIA7CC///sAV1chWRJAgAAwBdznLYglAAQ
+  </data>
+ </layer>
+</map>
