@@ -24,7 +24,7 @@ class StartScreen(arcade.View):
 
 
     def on_mouse_press(self, _x, _y, _button, _modifiers):
-        """ If the user presses the mouse button, start the game. """
+        """ Om användaren trycker på musknappen, starta spelet. """
         game_view = Spel()
         game_view.setup()
         self.window.show_view(game_view)
