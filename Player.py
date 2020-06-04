@@ -24,11 +24,12 @@ class Player:
         self.sprite.center_x = 64
         self.sprite.center_y = 96
         
-
+    # Sätter beroenden som spelaren behöver
     def setup(self, physics_engine):
         
         self.physics_engine = physics_engine
 
+    # Hanterar inputs för spelaren
     def on_key_press(self, key, modifiers):
 
         if key == arcade.key.UP or key == arcade.key.W:
@@ -40,6 +41,7 @@ class Player:
         elif key == arcade.key.RIGHT or key == arcade.key.D:
             self.sprite.change_x = PLAYER_MOVEMENT_SPEED
 
+    # Hanterar inputs för spelaren
     def on_key_release(self, key, modifiers):
 
         if key == arcade.key.LEFT or key == arcade.key.A:

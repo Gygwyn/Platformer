@@ -2,6 +2,8 @@ import arcade
 import os
 from Player import Player
 
+
+# Konstanter
 SCREEN_WIDTH = 1000
 SCREEN_HEIGHT = 650
 SCREEN_TITLE = "Coiner"
@@ -26,8 +28,6 @@ class Spel(arcade.View):
 
     def __init__(self):
 
-        
-
         super().__init__()
 
         filepath = os.path.abspath(__file__)
@@ -49,7 +49,7 @@ class Spel(arcade.View):
         # Ladda ljud
         self.collect_coin_sound = arcade.load_sound(dirpath +"/ljud/Coinsound.wav")
         self.jump_sound = arcade.load_sound(dirpath +"/ljud/Jumpsound.wav")
-
+        # Sätter färg på bakgrunden
         arcade.set_background_color(arcade.csscolor.CORNFLOWER_BLUE)
 
     def setup(self):
@@ -85,7 +85,7 @@ class Spel(arcade.View):
             wall = arcade.Sprite(dirpath +"/bilder/PNG/Tiles/boxCrate_single.png", TILE_SCALING)
             wall.position = coordinate
             self.wall_list.append(wall)
-        
+            # Mynt på marken
         for x in range(128, 1250, 256):
             coin = arcade.Sprite(dirpath +"/bilder/PNG/Items/coinGold.png", COIN_SCALING)
             coin.center_x = x
@@ -100,7 +100,6 @@ class Spel(arcade.View):
         """ Rendera skärmen """
 
         arcade.start_render()
-        # return
         self.wall_list.draw()
         self.coin_list.draw()
         self.player_list.draw()
@@ -108,11 +107,12 @@ class Spel(arcade.View):
         score_text = f"Score: {self.score}"
         arcade.draw_text(score_text, 10 + self.view_left, 10 + self.view_bottom, arcade.csscolor.BLACK, 18)
 
+        # Hanterar inputs för spelaren
     def on_key_press(self, key, modifiers):
 
         self.player.on_key_press(key, modifiers)
 
-
+        # Hanterar inputs för spelaren
     def on_key_release(self, key, modifiers):
 
         self.player.on_key_release(key, modifiers)
